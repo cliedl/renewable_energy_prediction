@@ -9,24 +9,25 @@ import requests
 # animated penguin
 
 
-# def load_lottieurl(url: str):
-#     r = requests.get(url)
-#     if r.status_code != 200:
-#         return None
-#     return r.json()
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 
-# lottie_penguin = load_lottieurl(
-#     "https://lottie.host/1293dba5-8288-465a-955c-355feba68a6d/n4jxaVVHZZ.json"
-# )
+lottie_penguin = load_lottieurl(
+    "https://lottie.host/1293dba5-8288-465a-955c-355feba68a6d/n4jxaVVHZZ.json"
+)
 
-# header_col1, header_col2 = st.columns([1, 5])
-# with header_col1:
-#     st_lottie(lottie_penguin)
+header_col1, header_col2 = st.columns([1, 5])
+with header_col1:
+    st_lottie(lottie_penguin)
 
-# with header_col2:
-#     st.title("This is a :penguin: app")
-st.title("This is a :penguin: app")
+with header_col2:
+    st.title("This is a :penguin: app")
+
+# st.title("This is a :penguin: app")
 
 # Create sidebar
 option = st.sidebar.radio("Choose between Image and Video", ["Image", "Video"])
